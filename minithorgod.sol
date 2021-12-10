@@ -230,13 +230,13 @@ contract ERC20and223TokenImpl is ERC20TokenInterface
 
 
 
-contract PowTokenBase is ERC20and223TokenImpl {
+contract MiniThorGodGodBase is ERC20and223TokenImpl {
     event Mined(address owner, uint256 value);
     mapping(bytes32 => bool) spends;
     uint private total_coins;
 
 
-    function PowTokenBase() internal {}
+    function MiniThorGodBase() internal {}
 
 
     function () {
@@ -321,7 +321,7 @@ contract PowTokenBase is ERC20and223TokenImpl {
 
 
 
-contract PowTokenHashedBase is PowTokenBase
+contract MiniThorGodHashedBase is MiniThorGodBase
 {
     function PowTokenHashedBase () internal {}
 
@@ -379,7 +379,7 @@ contract PowTokenHashedBase is PowTokenBase
 /**
 * Implements a Proof of Work token using SHA3 
 */
-contract PowToken_SHA3 is PowTokenHashedBase
+contract MiniThorGod_SHA3 is MiniThorGodHashedBase
 {
     string public constant symbol = "PoWS3";
     string public constant name = "ProofOfWork SHA3";    
@@ -400,10 +400,10 @@ contract PowToken_SHA3 is PowTokenHashedBase
 /**
 * Implements a Proof of Work token using SHA256
 */
-contract PowToken_SHA256 is PowTokenHashedBase
+contract MiniThorGod_SHA256 is MiniThorGodHashedBase
 {
-    string public constant symbol = "PoWS2";
-    string public constant name = "ProofOfWork SHA256";    
+    string public constant symbol = "MTG";
+    string public constant name = "MiniThorGod SHA256";    
     uint8 public constant decimals = 12;
 
 
