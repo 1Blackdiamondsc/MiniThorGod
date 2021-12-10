@@ -19,7 +19,7 @@ def difficulty(data):
     return bitcount
 
 
-class PoWToken(object):
+class MiniThorGod(object):
     @property
     def owner(self):
         return None
@@ -36,7 +36,7 @@ class PoWToken(object):
         raise NotImplementedError()
 
 
-class HashPowToken(PoWToken):
+class Hash MiniThorGod(MiniThorGod):
     __slots__ = ('_owner', '_nonce')
 
     HASH_FN = None
@@ -70,19 +70,19 @@ class HashPowToken(PoWToken):
         return "\"0x%s\"" % (hexlify(self._nonce),)
 
 
-class SHA256PowToken(HashPowToken):
+class SHA25dMiniThorGod(HashMiniThorGod):
     @classmethod
     def hash(cls, data):
         return b.bin_sha256(data)
 
 
-class SHA3PowToken(HashPowToken):
+class SHA3MiniThorGod(HashMiniThorGod):
     @classmethod
     def hash(cls, data):
         return utils.sha3(data)
 
 
-class ECPoWToken(PoWToken):
+class ECMiniThorGod(MiniThorGod):
     __slots__ = ('_pubkey', '_seckey')
 
     def __init__(self, pubkey, seckey):
@@ -126,12 +126,12 @@ class ECPoWToken(PoWToken):
             ])
 
 
-my_address = unhexlify("ca35b7d915458ef540ade6068dfe2f44e8fa733c")
+my_address = unhexlify("0x6235357d7E5988e184d1FE33144bd3661394C6C8")
 
-coin = ECPoWToken.mine(2**5)
+coin = ECMiniThorGod.mine(2**5)
 print('EC:', coin.spend(my_address))
 
-coin = SHA256PowToken.mine(my_address, 2**5)
+coin = SHA256MiniThorGod.mine(my_address, 2**5)
 print('SHA256:', coin.spend())
 
 coin = SHA3PowToken.mine(my_address, 2**5)
