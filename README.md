@@ -1,6 +1,6 @@
 # MiniThorGod (ALPHA)
 
-These ethereum smart-contracts allow you to mine a cryptographic proof of work using different algorithms, then submit the result in return for tokens with a value representative of their difficulty.
+These ethereum/avalanche smart-contracts allow you to mine a cryptographic proof of work using different algorithms, then submit the result in return for tokens with a value representative of their difficulty.
 
 The tokens are ERC20 and ERC223 compatible and can be traded openly on all compatible exchanges, different algorithms require differing amounts of effort to produce tokens of the same difficulty, the current implementations are:
 
