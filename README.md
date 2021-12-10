@@ -1,4 +1,4 @@
-# Proof of Work Token (ALPHA)
+# MiniThorGod (ALPHA)
 
 These ethereum smart-contracts allow you to mine a cryptographic proof of work using different algorithms, then submit the result in return for tokens with a value representative of their difficulty.
 
